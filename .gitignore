@@ -1,0 +1,60 @@
+# course config files
+*.yaml
+
+# gradle
+.gradle/
+build
+
+
+# idea config
+.idea
+
+# old stages
+/Bulls and Cows/*
+!/Bulls and Cows/task/
+/Bulls and Cows/task/*
+!/Bulls and Cows/task/src
+
+# Project exclude paths
+/Topics/Calling methods/Area of parallelogram/out/
+/Topics/Calling methods/Area of parallelogram/out/production/classes/
+/Topics/Coding style conventions/Determining the sign of an integer/out/
+/Topics/Coding style conventions/Determining the sign of an integer/out/production/classes/
+/Topics/Functional decomposition/Kate's math function/out/
+/Topics/Functional decomposition/Kate's math function/out/production/classes/
+/Topics/Hierarchy of exceptions/Base class/out/
+/Topics/Hierarchy of exceptions/Base class/out/production/classes/
+/Topics/Hierarchy of exceptions/Handling exceptions based on input range/out/
+/Topics/Hierarchy of exceptions/Handling exceptions based on input range/out/production/classes/
+/Topics/Inheritance/Simulating a zoo with lions and fish/out/
+/Topics/Inheritance/Simulating a zoo with lions and fish/out/production/classes/
+/Topics/Initializing new instances. Constructor/Creating a class for book with title and author/out/
+/Topics/Initializing new instances. Constructor/Creating a class for book with title and author/out/production/classes/
+/Topics/Integer types and operations/How many nuts each squirrel will get/out/
+/Topics/Integer types and operations/How many nuts each squirrel will get/out/production/classes/
+/Topics/Iterating over arrays/Sum array elements greater than a value/out/
+/Topics/Iterating over arrays/Sum array elements greater than a value/out/production/classes/
+/Topics/Math library/Heron's formula/out/
+/Topics/Math library/Heron's formula/out/production/classes/
+/Topics/Math library/The angle between vectors/out/
+/Topics/Math library/The angle between vectors/out/production/classes/
+/Topics/Multiple conditions  switch/Shape/out/
+/Topics/Multiple conditions  switch/Shape/out/production/classes/
+/Topics/Objects and their properties/Army/out/
+/Topics/Objects and their properties/Army/out/production/classes/
+/Topics/Printing data/We need to learn Java/out/
+/Topics/Printing data/We need to learn Java/out/production/classes/
+/Topics/Processing strings/Cutting out the middle of a string/out/
+/Topics/Processing strings/Cutting out the middle of a string/out/production/classes/
+/Topics/Processing strings/Modifying a string by changing letters and digits/out/
+/Topics/Processing strings/Modifying a string by changing letters and digits/out/production/classes/
+/Topics/Processing strings/Move the first N characters/out/
+/Topics/Processing strings/Move the first N characters/out/production/classes/
+/Topics/Random class/Gaussian random numbers/out/
+/Topics/Random class/Gaussian random numbers/out/production/classes/
+/Topics/StringBuilder/Create an email/out/
+/Topics/StringBuilder/Create an email/out/production/classes/
+/Topics/StringBuilder/Love of big letters/out/
+/Topics/StringBuilder/Love of big letters/out/production/classes/
+/Topics/While and do-while loops/The sequence/out/
+/Topics/While and do-while loops/The sequence/out/production/classes/

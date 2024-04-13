@@ -1,0 +1,91 @@
+<h2>Multiple conditions: switch</h2>
+<div class="step-text">
+<p>You already know how to shape the <a class="theory-lookup" href="/learn/step/3503" rel="noopener noreferrer nofollow" target="_blank" title="Control flow in Java refers to the order in which various parts of a program are executed. | It is often managed using control flow statements, which determine the flow of execution based on certain conditions. The program's control structure can be visualized as a tree, where each node represents a statement or a block of statements, and the edges represent the flow of control. The two most common control flow statements are the if-else statement and the while loop, which control the flow of execution based on a boolean condition.">control flow</a> of a program using if-else statements. Perhaps, you have faced situations in which you had to stack and nest multiple if-else statements to get the desired result. In this topic, you will learn an alternative way to deal with multiple choices: <strong>the <a class="theory-lookup" href="/learn/step/16036" rel="noopener noreferrer nofollow" target="_blank" title="In Java, switch statement is a control flow statement that allows for the evaluation of an expression against multiple cases. | It provides an alternative to long chains of if-else statements, enhancing code readability. However, switch statements can be verbose and prone to errors due to strict requirements for placing statements. To address these issues, Java introduced switch expressions, which offer a more concise and less error-prone alternative. Switch expressions yield a value, assigned to a variable, and can use a new arrow syntax for brevity.">switch statement</a></strong>. It enhances code readability, efficiency, and organization compared to lengthy <code class="language-java">if-else</code> chains, making it valuable for handling multiple conditions.</p>
+<h5 id="when-a-conditional-statement-is-not-so-good" style="text-align: center;">When a conditional statement is not so good</h5>
+<p>Suppose you need to write a program that performs different actions depending on the value of a variable. For example, choosing an <a class="theory-lookup" href="/learn/step/29027" rel="noopener noreferrer nofollow" target="_blank" title="An action in Java is an interface that describes some behavior or functionality that a class or object can perform. | It is a way to define a set of methods that a class must implement, without providing the implementation details. This allows for greater flexibility and modularity in programming, as classes can be designed to work with any implementation of the action interface.">action</a> from the menu of a game. To do that you can use a conditional statement with multiple branches as shown below.</p>
+<pre><code class="language-java">int action = ...; // a certain value from 1 to 4
+        
+if (action == 1) {
+    System.out.println("Starting a new game...");
+} else if (action == 2) {
+    System.out.println("Loading a saved game");
+} else if (action == 3) {
+    System.out.println("Displaying help...");
+} else if (action == 4) {
+    System.out.println("Exiting...");
+} else {
+    System.out.println("Unsuitable action, please, try again");
+}</code></pre>
+<p>Of course, this code handles the task. But if your conditional statement has a lot of branches, it can be hard to understand for people.</p>
+<h5 id="three-keywords-switch-case-and-default" style="text-align: center;">Three keywords: switch, case, and default</h5>
+<p><strong>The switch statement</strong> provides a way to choose between multiple cases based on the value of a single variable (not an <a class="theory-lookup" href="/learn/step/11635" rel="noopener noreferrer nofollow" target="_blank" title="An expression in Java is a combination of variables, operators, and method invocations that yield a value when evaluated. | It can be a simple literal, variable, or operator, or a complex mix of these elements. Expressions are fundamental to programming as they allow you to perform calculations, manipulate data, and make decisions. They can be assigned to variables, passed as arguments to methods, or used in control flow structures like if-else statements and loops. Understanding expressions is crucial for writing effective Java code.">expression</a>!). The <a class="theory-lookup" href="/learn/step/3518" rel="noopener noreferrer nofollow" target="_blank" title="In Java, a variable is a named storage location that is used to store a value of a specific type. | It is declared with a specific data type, which determines the kind of value that can be stored in it. Every variable has a unique name, also known as an identifier, which is used to access its value. Variables can be declared and initialized in a single statement, and their values can be accessed and modified throughout the program.">variable</a> can be an <a class="theory-lookup" href="/learn/step/3565" rel="noopener noreferrer nofollow" target="_blank" title="In Java, an integer number is a type of primitive data type that represents whole numbers, both positive and negative, as well as zero. | The most commonly used integer types are byte, short, int, and long, with int being the default type. These types can store numbers within specific ranges, with int being able to store numbers between -2,147,483,648 and 2,147,483,647.">integer number</a>, <a class="theory-lookup" href="/learn/step/3522" rel="noopener noreferrer nofollow" target="_blank" title="In Java, a character is a single symbol, denoted with a single quote, that can represent a letter, digit, whitespace, or other symbols. | It is actually an integer type that stores the Unicode integer value of each character, which is why character literals can be used as integers if needed. The numeric value of a character can be found in a special table online, and since Java 7, underscores can be used between digits to increase the readability of numeric literals.">character</a>, <a class="theory-lookup" href="/learn/step/3522" rel="noopener noreferrer nofollow" target="_blank" title="A string in Java is a reference type consisting of characters, and it is one of the most widely used types in Java. | Strings are immutable, meaning their characters cannot be changed once created. They have methods for getting individual characters and extracting substrings, and they work with text, whether it's a simple hello, world! or a complex document. Strings are everywhere in Java code, and understanding how to use them effectively is fundamental for any Java developer.">string</a>, or <a class="theory-lookup" href="/learn/step/11514" rel="noopener noreferrer nofollow" target="_blank" title="In Java, enumeration is a keyword used to create a list of constant grouped by their content, such as season, color, or state. | It is implemented as a special class with predefined instances, ensuring thread safety during object initialization and simplifying the creation of singleton classes. Enumeration values have a name that can be accessed and manipulated, and they can include fields, methods, and constructors to extend their functionality. Overall, enumeration in Java provides a clear and error-free way to handle a variable with a limited set of possible values.">enumeration</a>. The last two <a class="theory-lookup" href="/learn/step/3492" rel="noopener noreferrer nofollow" target="_blank" title="In Java, a 'type' refers to a classification of data that determines the values it can hold and the operations that can be performed on it. | This can include primitive types (such as int, char, or boolean) and reference types (such as classes, interfaces, or arrays). Each type has a specific size and range of values it can represent, and the operations that can be performed on it are defined by the language. Understanding the different types in Java is essential for writing correct and efficient code, as well as for understanding the behavior of existing code.">types</a> will be examined further in the following topics.</p>
+<p>With the switch statement, the previous code will look like this:</p>
+<pre><code class="language-java">switch (action) {
+    case 1:
+        System.out.println("Starting a new game...");
+        break;
+    case 2:
+        System.out.println("Loading a saved game");
+        break;
+    case 3:
+        System.out.println("Displaying help...");
+        break;
+    case 4:
+        System.out.println("Exiting...");
+        break;
+    default:
+        System.out.println("Unsuitable action, please, try again");
+}</code></pre>
+<p>As you can see, this code is well-structured and easier to read than the equal <a class="theory-lookup" href="/learn/step/3503" rel="noopener noreferrer nofollow" target="_blank" title="A conditional statement in Java is a programming construct that allows a program to make decisions based on whether a certain condition is true or false. | It enables the program to execute different blocks of code depending on the outcome of the condition. The basic structure of a conditional statement in Java is an if keyword followed by a boolean expression in parentheses, and a body enclosed in curly braces. If the expression is true, the code inside the curly braces is executed, otherwise, it is skipped.">conditional statement</a>. We have not explained the keywords <code class="language-java">switch</code>, <code class="language-java">case</code> and <code class="language-java">break</code> yet, but you can already guess what they mean.</p>
+<h5 id="the-general-form-of-the-switch-statement" style="text-align: center;">The general form of the switch statement</h5>
+<p>The most general form of the switch statement is the following</p>
+<pre><code class="language-java">switch (variable) {
+    case value1:
+        // do something here
+        break;
+    case value2:
+        // do something here
+        break;
+    
+    //... other cases
+    
+    case valueN:
+        // do something here
+        break;
+    default:
+        // do something by default
+        break; // it can be omitted
+}</code></pre>
+<p>The <code class="language-java">switch</code> and <code class="language-java">case</code> keywords are always required here. The keywords <code class="language-java">break</code> and <code class="language-java">default</code> are optional. The keyword <code class="language-java">break </code>stops the execution of the whole switch statement, not just one case.</p>
+<p>If a <code class="language-java">case</code> does not have the <code class="language-java">break</code> <a class="theory-lookup" href="/learn/step/3521" rel="noopener noreferrer nofollow" target="_blank" title="In Java, a keyword is a reserved word that has a special meaning in the programming language. | These words cannot be used as variable names in your own program. Keywords are part of the syntax, a set of rules that define how a program needs to be written in order to be valid. For instance, the keyword 'final' is used to declare a constant variable, indicating that its value cannot be changed after being initialized. However, the use of keywords can sometimes make code less readable due to boilerplate code, hence their usage should be standardized in a project.">keyword</a>, the following <code class="language-java">case</code> will be executed as well, including the <code class="language-java">default</code> case. The <code class="language-java">default</code> case is also executed if there's no other <code class="language-java">case</code> that matches the variable value. The <code class="language-java">break</code> keyword in the <code class="language-java">default</code> branch is optional and can be omitted.</p>
+<p>A <code class="language-java">case</code> section may contain any block of code, even a <a class="theory-lookup" href="/learn/step/11505" rel="noopener noreferrer nofollow" target="_blank" title="In Java, a nested class is a class that is declared inside another class. | The class that contains the nested class is often referred to as the outer class, and the nested class is referred to as a member of the outer class. There are two types of nested classes: non-static nested classes (also known as inner classes) and static nested classes. Non-static nested classes have access to the members of the outer class, while static nested classes do not. Nested classes are used to group classes logically and increase the encapsulation of your code.">nested</a> <code class="language-java">switch</code> statement, however, it is recommended to avoid deeply nested code structures whenever possible.</p>
+<h5 id="an-example-with-zero-one-and-two" style="text-align: center;">An example with "zero", "one" and "two"</h5>
+<p>Let's consider another example. The following code outputs the names of integer numbers or a <a class="theory-lookup" href="/learn/step/3535" rel="noopener noreferrer nofollow" target="_blank" title="In Java, the default value for a variable is the default value of its type. | If you don't define a specific constructor, the default constructor will not be created. If a class has no explicit constructor, the Java compiler automatically provides a default no-argument constructor.">default</a> text. This switch statement has three base cases and a single default case.</p>
+<pre><code class="language-java">int val = ...;
+switch (val) {
+     case 0:
+         System.out.println("zero");
+         break;
+     case 1:
+         System.out.println("one");
+         break;
+     case 2:
+         System.out.println("two");
+         break;
+     default:
+         System.out.println("The value is less than zero or greater than two");
+} </code></pre>
+<p>If <code class="language-java">val</code> is 0, the code prints:</p>
+<pre><code class="language-java">zero</code></pre>
+<p>If <code class="language-java">val</code> is 1, the code <a class="theory-lookup" href="/learn/step/13775" rel="noopener noreferrer nofollow" target="_blank" title="In Java, 'print' is a statement used to display output to the console. | It writes the specified text or variable value to the standard output stream, which is typically the console. Unlike 'println', 'print' does not add a newline character after the output, meaning that subsequent print statements will continue writing on the same line. It's a fundamental tool for providing feedback and displaying results in a Java program.">prints</a>:</p>
+<pre><code class="language-java">one</code></pre>
+<p>if <code class="language-java">val</code> is 10, the code prints:</p>
+<pre><code class="language-java">The value is less than zero or greater than two</code></pre>
+<p>If you forget the keyword <code class="language-java">break</code> in a case, the compiler won't consider it an <a class="theory-lookup" href="/learn/step/3497" rel="noopener noreferrer nofollow" target="_blank" title="In Java, an error is a type of exception that indicates a problem has occurred during the execution of a program. | It is a runtime exception, meaning it occurs while the program is running, and it interrupts the normal flow of the program. Errors are typically caused by issues outside the control of the program, such as running out of memory or a network connection being lost. They are usually not recoverable and result in the termination of the program. Understanding errors is essential for debugging and handling unexpected situations in Java programs.">error</a>. Let's remove it from the second case (case 1) and assign 1 to <code class="language-java">val</code>. The program prints:</p>
+<pre><code class="language-java">one
+two</code></pre>
+<p>Omitting the <code class="language-java">break</code> keyword is not a good practice. Try to avoid it.</p>
+<p>Java 12 introduced some new features allowing to use <strong>switch</strong> as an <a href="https://hyperskill.org/learn/step/16036" rel="noopener noreferrer nofollow" target="_blank">expression</a>.</p>
+<h5 id="conclusion">Conclusion</h5>
+<p>When you have a limited number of cases to choose from, switch statements can help you avoid extensive if-else constructions. For that, you need the <code class="language-java">switch</code> keyword to introduce the value to evaluate, and <code class="language-java">case</code> for each of the possible values. Do not forget to also use the <code class="language-java">break</code> keyword to avoid executing extra cases and <code class="language-java">default</code> branch to indicate the default behavior.</p>
+</div>
