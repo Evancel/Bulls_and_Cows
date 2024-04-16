@@ -12,4 +12,6 @@
    Good luck!
 
 
-![image](https://github.com/Evancel/Bulls_and_Cows/assets/19353878/2f3a9c67-6dbb-4f0b-9cf8-793fe0b09e6a)
+![image](https://github.com/Evancel/Bulls_and_Cows/assets/19353878/7d341ffa-3684-45e6-9218-9d9d8de3f397) width="200" height="100"
+
+
