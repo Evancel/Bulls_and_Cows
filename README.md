@@ -10,3 +10,5 @@
    If a given character appears in the code but its position doesn't match, then it's called a "cow."
 5. You are unlimited with attempts, but let's make it funnier, try to guess from 4 or 5 attempts.
    Good luck!
+
+   <img src="bulls_cows.png" width="200" height="100">
