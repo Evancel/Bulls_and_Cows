@@ -1,8 +1,12 @@
-This is the *Bulls and Cows* project I made myself.
+#Description
 
-
-<p>Write your own advanced version of the classic code breaking game "Bulls and Cows". Start with recreating the original version of the game and then take it to a new level.</p><br/><br/>Learn more at <a href="https://hyperskill.org/projects/53?utm_source=ide&utm_medium=ide&utm_campaign=ide&utm_content=project-card">https://hyperskill.org/projects/53</a>
-
-Here's the link to the project: https://hyperskill.org/projects/53
-
-Check out my profile: https://hyperskill.org/profile/527332546
+1. Choose a level of the game (From 1 till 36).
+2. Choose how many characters: digits and lowercase letters can be in the Secret Code.
+   The number of characters can be equal or greater than the level.
+   Watch out! Each character can appear in the Secret Code only once.
+3. The Secret Code is generated. Try to guess it.
+4. Type any character sequence,  its length should be equal the level of your Game.
+   If a character in your answer matches a character and its position in the code, it's called a "bull".
+   If a given character appears in the code but its position doesn't match, then it's called a "cow."
+5. You are unlimited with attempts, but let make it funnier, try to guess from 4 or 5 attempts.
+   Good luck!
