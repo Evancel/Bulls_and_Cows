@@ -1,4 +1,4 @@
-#Description
+# Description
 
 1. Choose a level of the game (From 1 to 36).
 2. Choose how many characters: digits and lowercase letters can be in the Secret Code.
