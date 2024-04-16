@@ -1,4 +1,4 @@
-   <img src="bulls_cows.png" width="400" height="150">
+   <img src="bulls_cows.png" width="300" height="150">
 
 # Description
 
