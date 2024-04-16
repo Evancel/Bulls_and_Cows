@@ -1,3 +1,5 @@
+   <img src="bulls_cows.png" width="200" height="100">
+
 # Description
 
 1. Choose a level of the game (From 1 to 36).
@@ -9,6 +11,4 @@
    If a character in your answer matches a character and its position in the code, it's called a "bull".
    If a given character appears in the code but its position doesn't match, then it's called a "cow."
 5. You are unlimited with attempts, but let's make it funnier, try to guess from 4 or 5 attempts.
-   Good luck!
-
-   <img src="bulls_cows.png" width="200" height="100">
+   **Good luck!**
