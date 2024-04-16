@@ -1,6 +1,5 @@
- <img src="bulls_cows.png" width="300" height="150">
 
-# Description
+# Description   <img src="bulls_cows.png" width="300" height="150">
 
 1. Choose a level of the game (From 1 to 36).
 2. Choose how many characters: digits and lowercase letters can be in the Secret Code.
